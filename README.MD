@@ -41,31 +41,23 @@ npm i
 npm run build
 serve -l 3000 -s build
 ```
-
-# 8. Запуск react-app 
-```sh
-cd digit-recognition-MII
-npm i
-npm run build
-serve -l 3000 -s build
-```
  
-# 9. Создание виртуального окружения
+# 8. Создание виртуального окружения
 ```sh
 python -m venv env
 ```
 
-# 10. Активация виртуального окружения
+# 9. Активация виртуального окружения
 ```sh
 sourse ./env/bin/activate
 ```
 
-# 11. Установка необходимых пакетов
+# 10. Установка необходимых пакетов
 ```sh
 pip install -r requirements.txt
 ```
 
-# 12. Запуска сервера (бэк)
+# 11. Запуска сервера (бэк)
 ```sh
 python src/manage.py runserver
 ```
