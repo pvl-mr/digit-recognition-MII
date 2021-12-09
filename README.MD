@@ -63,7 +63,7 @@ python src/manage.py runserver
 ```
 
 ## _Результат_
-- Сервер будет запущен по адресу: https://localhost:8000-
+- Сервер будет запущен по адресу: https://localhost:8000
 - Приложение react будет запущено по адресу https://localhost:3000
 
 
