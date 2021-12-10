@@ -1,0 +1,10 @@
+[Unit]
+Description=script run
+
+[Service]
+ExecStart=/etc/run_script.sh
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
