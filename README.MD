@@ -66,4 +66,29 @@ python src/manage.py runserver
 - Сервер будет запущен по адресу: https://localhost:8000
 - Приложение react будет запущено по адресу https://localhost:3000
 
+## _Cоздание сервиса для запуска серверов после перезагрузки машины_
+Используются 2 файла:
+- runservers.service - сервис для запуска скрипта, после каждой перезагрузки машины
+- run_scripts.sh - скрипт, запускающий сервера
+# 1. Сделать скрипт исполняемым
+```sh
+chmod a+x run_scripts.sh
+```
+# 2. Переместить скрипт в /etc
+```sh
+sudo mv run_scripts.sh /etc
+```
 
+# 3. Переместить сервис в /etc/systemd/system
+```sh
+sudo mv runservers.service /etc/systemd/system
+```
+
+# 4. Запустить сервис
+```sh
+cd /etc/systemd/system
+sudo systemctl daemon-reload
+sudo systemctl enable runservers.service
+sudo systemctl start runservers.service
+```
+Последняя команда не завершится, нужно выйти Ctrl+C
